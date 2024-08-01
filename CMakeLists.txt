@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
 add_executable(Engine 
-src/main.cpp
+    src/main.cpp
+    src/Engine.cpp
 )
 
 target_include_directories(Engine PRIVATE include)
