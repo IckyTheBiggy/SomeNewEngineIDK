@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 add_executable(Engine 
     src/main.cpp
     src/Engine.cpp
+    projectdir/Game.cpp
 )
 
 target_include_directories(Engine PRIVATE include)

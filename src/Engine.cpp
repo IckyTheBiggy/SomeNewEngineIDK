@@ -8,10 +8,18 @@ void Engine::Run(const int windowWidth,
 
 	SetTargetFPS(120);
 
+    Game game;
+
+    game.Start();
+
 	while (!WindowShouldClose())
 	{
+        game.Update();
+
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
+
+        game.Render();
 
 		EndDrawing();
 	}
