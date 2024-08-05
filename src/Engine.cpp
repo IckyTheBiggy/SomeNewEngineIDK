@@ -8,6 +8,13 @@ void Engine::Run(const int windowWidth,
 
 	SetTargetFPS(120);
 
+	Camera camera = {0};
+	camera.position = {10, 10, 10};
+	camera.target = {0, 0, 0};
+	camera.up = {0, 1, 0};
+	camera.fovy = 60;
+	camera.projection = CAMERA_PERSPECTIVE;
+
     Game game;
 
     game.Start();
@@ -18,8 +25,13 @@ void Engine::Run(const int windowWidth,
 
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
+		BeginMode3D(camera);
+	
+		game.Render3D();
 
-        game.Render();
+		EndMode3D();
+
+		game.Render();
 
 		EndDrawing();
 	}

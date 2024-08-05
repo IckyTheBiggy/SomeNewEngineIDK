@@ -6,5 +6,6 @@ public:
     void Start();
     void Update();
     void Render();
+    void Render3D();
 private:
 };
