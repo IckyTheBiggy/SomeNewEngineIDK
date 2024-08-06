@@ -1,6 +1,12 @@
 {
     "files.associations": {
         "__node_handle": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "*.ipp": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "__split_buffer": "cpp",
+        "list": "cpp"
     }
 }

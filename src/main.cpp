@@ -1,7 +1,7 @@
 #include "Engine.h"
 
-int main() 
+int main()
 {
-    Engine engine;
-    engine.Run(800, 600, "Window");
+	static Engine engine;
+	engine.Run(1600, 1000, "Window");
 }
