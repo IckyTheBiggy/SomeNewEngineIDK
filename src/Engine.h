@@ -10,8 +10,8 @@ class Engine
 {
   public:
 	void Run(const int widowWidth, const int windowHeight, const char *title);
-private:
 
+  private:
 };
 
 void Instantiate2D(GameObject2D gameObject);
