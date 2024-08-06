@@ -14,8 +14,5 @@ class Engine
   private:
 };
 
-void Instantiate2D(GameObject2D gameObject);
-void Instantiate3D(GameObject3D gameObject);
-
-std::vector<GameObject2D> gameObject2DRenderList;
-std::vector<GameObject3D> gameObject3DRenderList;
+void Instantiate2D(GameObject2D gameObject, Vector2 position);
+void Instantiate3D(GameObject3D gameObject, Vector3 position);

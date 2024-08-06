@@ -1,13 +1,18 @@
 #include "Engine.h";
 
-void Instantiate2D(GameObject2D gameObject)
+std::vector<GameObject2D> renderList2D;
+std::vector<GameObject3D> renderList3D;
+
+void Instantiate2D(GameObject2D gameObject, Vector2 position)
 {
-	gameObject2DRenderList.push_back(gameObject);
+	gameObject.transform.position = position;
+	renderList2D.push_back(gameObject);
 }
 
-void Instantiate3D(GameObject3D gameObject)
+void Instantiate3D(GameObject3D gameObject, Vector3 position)
 {
-	gameObject3DRenderList.push_back(gameObject);
+	gameObject.transform.position = position;
+	renderList3D.push_back(gameObject);
 }
 
 void Engine::Run(const int windowWidth,
@@ -41,18 +46,19 @@ void Engine::Run(const int windowWidth,
 
 		game.Render3D();
 
-		for (auto &gameObject3D : gameObject3DRenderList)
+		for (auto &gameObject : renderList3D)
 		{
-			gameObject3D.Render();
+			gameObject.Render();
 		}
+		
 
 		EndMode3D();
 
 		game.Render();
 
-		for (auto &gameObject2D : gameObject2DRenderList)
+		for (auto &gameObject : renderList2D)
 		{
-			gameObject2D.Render();
+			gameObject.Render();
 		}
 
 		EndDrawing();

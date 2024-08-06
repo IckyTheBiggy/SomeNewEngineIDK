@@ -37,9 +37,9 @@ void Game::Update()
         player.transform.position.x -= SPEED * deltaTime;
     }
 
-    if (IsKeyPressed(KEY_I))
+    if (IsKeyDown(KEY_I))
     {
-        Instantiate2D(bullet);
+        Instantiate2D(bullet, player.transform.position);
     }
 }
 
